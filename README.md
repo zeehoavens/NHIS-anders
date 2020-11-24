@@ -9,8 +9,10 @@ Een gebruiker kan daarvoor de volgende redenen hebben.
 - Visueel onderscheid maken tussen de normale werkomgeving en de acceptatieomgeving (alleen voor testers).
 
 Om deze aanpassingen te kunnen gebruiken, moeten ze worden "geïnjecteerd" in NHIS.
-Daarvoor is een invoegtoepassing voor de browser nodig: Stylus.
-Deze kan worden geïnstalleerd via de standaardplek die de browsermakers daarvoor hebben ingericht:
+Daarvoor is een invoegtoepassing voor de browser nodig.
+Afhankelijk van de (technische) vorm van de aanpassing gaat het om ofwel de invoegtoepassing Stylus of een "user script manager".
+
+Stylus kan worden geïnstalleerd via de standaardplek die de browsermakers daarvoor hebben ingericht:
 - [Stylus voor Firefox](https://addons.mozilla.org/nl/firefox/addon/styl-us/)
 - [Stylus voor Google Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
 
@@ -20,7 +22,7 @@ Deze invoegtoepassing heeft echter een goede reputatie en wordt door privacy act
 Dit naar aanleiding van incidenten met een oudere invoegtoepassing met vergelijkbare functionaliteit, Stylish.
 (Stylish wordt daarom sterk afgeraden in combinatie met NHIS.)
 
-Na installatie van Stylus kunnen de volgende "user styles" worden toegevoegd door te klikken op de volgende links.
+Na installatie van Stylus kunnen de volgende gebruikersstijlen worden toegevoegd door te klikken op de volgende links.
 
 - [NHIS lettertype](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-lettertype.user.css)
 - [NHIS acc lettertype](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-acc-lettertype.user.css)
@@ -30,3 +32,18 @@ De beschikbare keuzen zijn geoptimaliseerd voor een letterbreedte waarmee de mee
 
 Deze varianten verschillen alleen naar de webpagina waaraan ze zijn gekoppeld en het lettertype dat standaard wordt ingesteld 
 als de gebruiker geen eigen keuze heeft gemaakt in de opties voor de gebruikersstijl binnen Stylus.
+
+Testers kunnen er daarnaast voor kiezen om in de acceptatieomgeving standaard de nachtstand te activeren.
+Daarvoor is een aanvullende invoegtoepassing nodig met meer risico's.
+Een zorgvuldige benadering is onderwerp van discussie in het testteam.
+
+Zodra een benodigde invoegtoepassing geïnstalleerd en ingericht is, kan het volgende gebruikersscript worden toegevoegd.
+
+- [NHIS acc nachtstand](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-acc-nachtstand.user.js)
+
+Dit script activeert alleen de nachtstand, zonder de status in de toepassing en de tekst op de schakelknop aan te passen.
+Om de nachstand tijdelijk uit te schakelen, moet daardoor een keer extra op de knop worden geklikt om de nachtstand eerst ook NHIS zelf in te schakelen.
+Uitschakelen werkt daarna standaard.
+De nachtstand wordt weer automatisch geactiveerd bij verversen.
+
+Merk op dat de nachtstand alleen ontwikkeld is voor voor de Visit Monitor.
