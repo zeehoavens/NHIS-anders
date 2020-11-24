@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           NHIS lettertype
 @namespace      github.com/zeehoavens
-@version        0.1.0
+@version        0.2.0
 @description    selecteerbaar alternatief lettertype voor NHIS met meer tekens in de Vessel kolom van de Visit Monitor in combinatie met een goede leesbaarheid
 @author         zeehoavens
 @homepageURL    https://github.com/zeehoavens/NHIS-anders
@@ -10,8 +10,8 @@
 @preprocessor   stylus
 @var            select keuze "Lettertype" ["Arial-smal*", "Cambria", "Gill", "Franklin", "Tahoma", "Trebuchet"]
 ==/UserStyle== */
-@-moz-document domain("pc-gsp.com") {
-  familie= {
+@-moz-document domain("pc-gsp.com")
+  familie = {
     Arial-smal: "Arial Narrow",
     Cambria: "Cambria",
     Franklin: "Franklin Gothic",
@@ -20,7 +20,7 @@
     Trebuchet: "Trebuchet MS"
   }
 
-  grootte= {
+  grootte = {
     Arial-smal: 18px,
     Cambria: 14.8px,
     Franklin: 15px,
@@ -29,14 +29,8 @@
     Trebuchet: 15px
   }
 
-  html {
-    font-size: grootte[keuze];
-  }
+  html
+    font-size: grootte[keuze]
 
-  #app-root,
-  #app-root h1,
-  #app-root h2,
-  #app-root h3 {
-    font-family: familie[keuze];
-  }
-}
+  body, :root h3
+    font-family: familie[keuze]
