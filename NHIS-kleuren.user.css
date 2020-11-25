@@ -1,21 +1,23 @@
 /* ==UserStyle==
 @name           NHIS kleuren
 @namespace      github.com/zeehoavens
-@version        0.1.1
-@description    alternatief kleurschema voor NHIS acceptatie omgeving
+@version        0.2.0
+@description    alternatief kleurschema voor NHIS naar keuze in acceptatie en/of productie omgeving
 @author         zeehoavens
 @homepageURL    https://github.com/zeehoavens/NHIS-anders
 @updateURL      https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-kleuren.user.css
 @license        CC0-1.0
+@var            checkbox acc "Actief in acceptatie" 1
+@var            checkbox prod "Actief in productie" 0
 @preprocessor   stylus
 ==/UserStyle== */
 
-@-moz-document domain("gsp-nhis-acc.quintor.nl")
+aanpassing()
   lichtst = #fffdf9
   lichter = #e0dede
   licht = #d4d0d0
   kop = #b4b0b0
-  
+
   body
   .card
   .modal-content
@@ -32,7 +34,7 @@
   input:not([type=radio]):not([role=combobox]):not([type=checkbox])
   input:not([type=radio]):not([role=combobox]):not([type=checkbox]):focus
     background-color: lichtst
-  
+
   .ng-select
     background-color: lichtst
     .ng-select-container, .ng-select-container.opened
@@ -43,7 +45,7 @@
           background-color: lichtst
           input
             background-color: transparent
-      
+
   .ng-dropdown-panel
     background-color: lichtst
     .ng-dropdown-panel-items
@@ -56,7 +58,7 @@
 
   .waste-modal .modal-body
     background-color: licht
-    
+
   .theme-light
     .vertical-scroll-container
     .detail-screen
@@ -68,7 +70,7 @@
     .app-container
     .seagoing-position-details-inner
       background-color: lichtst
-      
+
     .filter-bar
     .title-header
     .seagoing-header
@@ -93,7 +95,7 @@
       background-color: lichter
       table tr td
         background-color: transparent
-        
+
     .submit_button_container
     .seagoing-visit-details-button-container
     .button-container
@@ -108,18 +110,30 @@
       background-color: licht
       td
         background-color: lichter
-        
-    
+
     .table thead th
       background-color: kop
 
   .table .thead-light th
   table.dataTable tbody tr
     background-color: lichter
-    
+
   :root .card-header
     background-color: kop
-    
+
   :root app-public-visit-monitor .card-header
     background-color: rgba(0, 0, 0, .03)
+
+@-moz-document domain("gsp-nhis-acc.quintor.nl")
+  :root
+    --kleuren-aangepast: acc
     
+  if acc
+    aanpassing()
+
+@-moz-document domain("pc-gsp.com")
+  :root
+    --kleuren-aangepast: prod
+    
+  if prod
+    aanpassing()

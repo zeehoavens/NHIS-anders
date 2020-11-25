@@ -36,18 +36,29 @@ Een eigen keuze voor het lettertype kan worden gecombineerd met aanpassingen aan
 Door eliminatie van een paar pixels scheidingsruimte en verkleining van de pictogrammen komt er dan meer ruimte voor tekst beschikbaar.
 Dit kan naar keuze worden in- en uitgeschakeld.
 
+Zie de opties in Stylus.
+
 ## Alternatief kleurschema
 
-Voor herkenbaarheid van de acceptatieomgeving kan worden gewerkt met iets gewijzigde achtergrondkleuren.
-In het bijzonder gaat het hier om minder blauw in de grijstinten.
+Met deze gebruikersstijl kan voor de productie en/of acceptatieomgeving een nieuw kleurschema worden ingesteld.
+De aanpassing betreft de achtergrondkleuren.
+In het bijzonder gaat het hier om vervanging van de blauwzweem in de grijstinten door een zwak roodachtig accent.
 
 - [NHIS kleuren](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-kleuren.user.css)
 
+Deze aanpassing heeft effect op:
+
+- alle grijze en witte achtergronden van de Visit Monitor in dagstand;
+- alle grijze en witte achtergronden van pagina's zonder dag/nachtstand;
+- de (bijna) witte achtergronden van de Visit Monitor in de nachtstand.
+
+Standaard is de aanpassing alleen actief voor acceptatie, maar via de opties in Stylus kan dit worden aangepast.
+
 ## Lay-out aanpassing
 
-Het is mogelijk de opgave van aantallen containers voor binnenvaart onder de ladingdetails te plaatsen.
+Deze gebruikersstijl verplaatst de opgave van aantallen containers voor binnenvaart naar het einde van de positiegegevens, dus onder de goederendetails.
 Dat effect is echter alleen visueel.
-Logisch gezien verandert de volgorde niet.
-Dat kun je merken in de tabvolgorde bij navigatie via het toetsenbord.
+Logisch beschouwd verandert de volgorde niet.
+Dat kun je merken aan de tabvolgorde bij navigatie via het toetsenbord.
 
 - [NHIS containers onderaan](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-containers-onderaan.user.css)
