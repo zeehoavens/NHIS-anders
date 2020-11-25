@@ -1,51 +1,54 @@
 /* ==UserStyle==
 @name           NHIS lettertype
 @namespace      github.com/zeehoavens
-@version        0.3.0
+@version        0.4.0
 @description    selecteerbaar alternatief lettertype voor NHIS met meer tekens in de Vessel kolom van de Visit Monitor in combinatie met een goede leesbaarheid
 @author         zeehoavens
 @homepageURL    https://github.com/zeehoavens/NHIS-anders
 @updateURL      https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-lettertype.user.css
 @license        CC0-1.0
 @preprocessor   stylus
-@var            select keuze "Lettertype" ["Arial-smal*", "Cambria", "Gill", "Franklin", "Tahoma", "Trebuchet"]
+@var            select prod "Lettertype productie" ["Standaard", "Arial-smal*", "Cambria", "Gill", "Franklin", "Tahoma", "Trebuchet"]
+@var            select acc "Lettertype acceptatie" ["Standaard", "Arial-smal", "Cambria", "Gill", "Franklin*", "Tahoma", "Trebuchet"]
 @var            checkbox kolommen "Kolommen Visit Monitor aanpassen" 1
 ==/UserStyle== */
-@-moz-document domain("pc-gsp.com")
-  familie = {
-    Arial-smal: "Arial Narrow",
-    Cambria: "Cambria",
-    Franklin: "Franklin Gothic",
-    Gill: "Gill Sans MT",
-    Tahoma: "Tahoma",
-    Trebuchet: "Trebuchet MS"
+
+familie = {
+  Arial-smal: "Arial Narrow",
+  Cambria: "Cambria",
+  Franklin: "Franklin Gothic",
+  Gill: "Gill Sans MT",
+  Tahoma: "Tahoma",
+  Trebuchet: "Trebuchet MS"
+}
+
+if kolommen
+  grootte = {
+    Arial-smal: 18px,
+    Cambria: 16px,
+    Franklin: 16px,
+    Gill: 16px,
+    Tahoma: 14.8px,
+    Trebuchet: 16.5px
+  }
+else
+  grootte = {
+    Arial-smal: 18px,
+    Cambria: 14.8px,
+    Franklin: 15px,
+    Gill: 14.5px,
+    Tahoma: 14px,
+    Trebuchet: 15px
   }
 
-  if kolommen
-    grootte = {
-      Arial-smal: 18.5px,
-      Cambria: 16px,
-      Franklin: 16px,
-      Gill: 16px,
-      Tahoma: 14.8px,
-      Trebuchet: 16.5px
-    }
-  else
-    grootte = {
-      Arial-smal: 18px,
-      Cambria: 14.8px,
-      Franklin: 15px,
-      Gill: 14.5px,
-      Tahoma: 14px,
-      Trebuchet: 15px
-    }
-
+lettertype()
   html
     font-size: grootte[keuze]
 
   body, :root h3
     font-family: familie[keuze]
 
+ruimte()
   if kolommen
     app-select-view .table
       th, td
@@ -60,3 +63,23 @@
       .svg-inline--fa
         .fa-w-16, .fa-w-18
           width: 0.9em
+
+@-moz-document domain("pc-gsp.com")
+  keuze = prod
+  
+  :root
+    --lettertype: keuze
+    
+  ruimte()
+  if keuze != Standaard
+    lettertype()
+
+@-moz-document domain("gsp-nhis-acc.quintor.nl")
+  keuze = acc
+  
+  :root
+    --lettertype: keuze
+  
+  ruimte()
+  if keuze != Standaard
+    lettertype()

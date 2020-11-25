@@ -28,11 +28,13 @@ Na installatie van Stylus kunnen de volgende gebruikersstijlen worden toegevoegd
 Met deze aanpassingen kan een ander lettertype worden gekozen dan de standaard Arial van NHIS.
 De beschikbare keuzen zijn geoptimaliseerd voor een letterbreedte waarmee de meeste wat langere namen in de Vessel kolom net passen.
 
-Deze varianten verschillen alleen naar de webpagina waaraan ze zijn gekoppeld en het lettertype dat standaard wordt ingesteld 
-als de gebruiker geen eigen keuze heeft gemaakt in de opties voor de gebruikersstijl binnen Stylus.
+Het is mogelijk voor producie en acceptatie omgeving afzonderlijke keuzen te maken.
 
 - [NHIS lettertype](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-lettertype.user.css)
-- [NHIS acc lettertype](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-acc-lettertype.user.css)
+
+Een eigen keuze voor het lettertype kan worden gecombineerd met aanpassingen aan de kolombreedtes in de Visit Monitor.
+Door eliminatie van een paar pixels scheidingsruimte en verkleining van de pictogrammen komt er dan meer ruimte voor tekst beschikbaar.
+Dit kan naar keuze worden in- en uitgeschakeld.
 
 ## Alternatief kleurschema
 
