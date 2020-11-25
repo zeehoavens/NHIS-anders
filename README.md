@@ -21,13 +21,31 @@ Deze invoegtoepassing heeft echter een goede reputatie en wordt door privacy act
 Dit naar aanleiding van incidenten met een oudere invoegtoepassing met vergelijkbare functionaliteit, Stylish.
 (Stylish wordt daarom sterk afgeraden in combinatie met NHIS.)
 
-Na installatie van Stylus kunnen de volgende gebruikersstijlen worden toegevoegd door te klikken op de volgende links.
+Na installatie van Stylus kunnen de volgende gebruikersstijlen worden toegevoegd door te klikken op de links.
 
-- [NHIS lettertype](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-lettertype.user.css)
-- [NHIS acc lettertype](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-acc-lettertype.user.css)
+## Aangepast lettertype
 
 Met deze aanpassingen kan een ander lettertype worden gekozen dan de standaard Arial van NHIS.
 De beschikbare keuzen zijn geoptimaliseerd voor een letterbreedte waarmee de meeste wat langere namen in de Vessel kolom net passen.
 
 Deze varianten verschillen alleen naar de webpagina waaraan ze zijn gekoppeld en het lettertype dat standaard wordt ingesteld 
 als de gebruiker geen eigen keuze heeft gemaakt in de opties voor de gebruikersstijl binnen Stylus.
+
+- [NHIS lettertype](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-lettertype.user.css)
+- [NHIS acc lettertype](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-acc-lettertype.user.css)
+
+## Alternatief kleurschema
+
+Voor herkenbaarheid van de acceptatieomgeving kan worden gewerkt met iets gewijzigde achtergrondkleuren.
+In het bijzonder gaat het hier om minder blauw in de grijstinten.
+
+- [NHIS kleuren](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-kleuren.user.css)
+
+## Lay-out aanpassing
+
+Het is mogelijk de opgave van aantallen containers voor binnenvaart onder de ladingdetails te plaatsen.
+Dat effect is echter alleen visueel.
+Logisch gezien verandert de volgorde niet.
+Dat kun je merken in de tabvolgorde bij navigatie via het toetsenbord.
+
+- [NHIS containers onderaan](https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-containers-onderaan.user.css)
