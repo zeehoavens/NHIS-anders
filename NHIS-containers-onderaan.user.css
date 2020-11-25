@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           NHIS containers onderaan
 @namespace      github.com/zeehoavens
-@version        0.1.2
+@version        0.2.0
 @description    container aantallen onder ladingdetails per scheepspositie
 @author         zeehoavens
 @homepageURL    https://github.com/zeehoavens/NHIS-anders
@@ -16,4 +16,6 @@
     flex-direction: column
   app-container-details
     order: 3
-    margin-top: 0.5rem
+    margin-top: 1rem
+    .mb-3
+      margin-bottom: 0 !important
