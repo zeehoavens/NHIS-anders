@@ -1,0 +1,122 @@
+/* ==UserStyle==
+@name           NHIS kleuren
+@namespace      github.com/zeehoavens
+@version        0.1.0
+@description    alternatief kleurschema voor NHIS acceptatie omgeving
+@author         zeehoavens
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document domain("gsp-nhis-acc.quintor.nl")
+  lichtst = #fffdf9
+  lichter = #e0dede
+  licht = #d4d0d0
+  kop = #b4b0b0
+  
+  body
+  .card
+  .modal-content
+  .form-control
+  select, select:focus
+  option
+  textarea, textarea:focus
+  .owl-dt-container
+  .white_button
+  .import_export_row .download_button
+  input[type=text]
+  input[role=combobox]
+  input.date_time
+  input:not([type=radio]):not([role=combobox]):not([type=checkbox])
+  input:not([type=radio]):not([role=combobox]):not([type=checkbox]):focus
+    background-color: lichtst
+  
+  .ng-select
+    background-color: lichtst
+    .ng-select-container, .ng-select-container.opened
+      background-color: lichtst
+      .ng-value-container
+        background-color: transparent
+        .ng-input
+          background-color: lichtst
+          input
+            background-color: transparent
+      
+  .ng-dropdown-panel
+    background-color: lichtst
+    .ng-dropdown-panel-items
+      background-color: transparent
+      .ng-option
+        background-color: transparent
+
+  .seagoing-position-container.even
+    background-color: lichter
+
+  .waste-modal .modal-body
+    background-color: licht
+    
+  .theme-light
+    .vertical-scroll-container
+    .detail-screen
+      background-color: lichtst
+    .new-vessel-dropdown-button
+      background-color: lichtst
+      .dropdown-item:hover
+        background-color: transparent
+    .app-container
+    .seagoing-position-details-inner
+      background-color: lichtst
+      
+    .filter-bar
+    .title-header
+    .seagoing-header
+    .table
+    .messages-header
+    .select-view-header
+    .ship-info-container
+    .vessel-info-form
+    .seagoing-ship-info-container
+    .defaults-container
+    .position_list_container.even
+    .seagoing-position-container.even
+    .isps-ship-security-plan
+    .ship-to-ship-activity
+    .hazardous-goods-details-container
+      background-color: lichter
+    .decision-history-container
+      background-color: lichter
+      td
+        background-color: licht        
+    .security-report-details
+      background-color: lichter
+      table tr td
+        background-color: transparent
+        
+    .submit_button_container
+    .seagoing-visit-details-button-container
+    .button-container
+    .exemptions-container
+    .visit_information_container
+    .seagoing_visit_information_container
+    .position_list_container.odd
+    .add_position_container
+    .international-ship-security-certificate
+    .previous-ports-activity
+    .waste-details-container
+      background-color: licht
+      td
+        background-color: lichter
+        
+    
+    .table thead th
+      background-color: kop
+
+  .table .thead-light th
+  table.dataTable tbody tr
+    background-color: lichter
+    
+  :root .card-header
+    background-color: kop
+    
+  :root app-public-visit-monitor .card-header
+    background-color: rgba(0, 0, 0, .03)
+    
