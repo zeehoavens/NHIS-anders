@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           NHIS containers onderaan
+@namespace      github.com/zeehoavens
+@version        0.1.0
+@description    container aantallen onder ladingdetails per scheepspositie
+@author         Me
+@preprocessor   stylus
+==/UserStyle== */
+
+@-moz-document url-prefix("https://gsp-nhis-acc.quintor.nl/visitmonitor"), url-prefix("https://pc-gsp.com/visitmonitor")
+  app-position-editor
+    display: flex
+    flex-direction: column
+  app-container-details
+    order: 3
+    margin-top: 0.5rem
+    
