@@ -1,14 +1,15 @@
 /* ==UserStyle==
 @name           NHIS acc lettertype
 @namespace      github.com/zeehoavens
-@version        0.2.0
+@version        0.3.0
 @description    selecteerbaar alternatief lettertype voor NHIS met meer tekens in de Vessel kolom van de Visit Monitor in combinatie met een goede leesbaarheid
 @author         zeehoavens
 @homepageURL    https://github.com/zeehoavens/NHIS-anders
 @updateURL      https://raw.githubusercontent.com/zeehoavens/NHIS-anders/main/NHIS-acc-lettertype.user.css
 @license        CC0-1.0
 @preprocessor   stylus
-@var            select keuze "Lettertype" ["Arial-smal", "Cambria*", "Gill", "Franklin", "Tahoma", "Trebuchet"]
+@var            select keuze "Lettertype" ["Arial-smal", "Cambria", "Gill", "Franklin*", "Tahoma", "Trebuchet"]
+@var            checkbox kolommen "Kolommen Visit Monitor aanpassen" 1
 ==/UserStyle== */
 @-moz-document domain("gsp-nhis-acc.quintor.nl")
   familie = {
@@ -20,17 +21,42 @@
     Trebuchet: "Trebuchet MS"
   }
 
-  grootte = {
-    Arial-smal: 18px,
-    Cambria: 14.8px,
-    Franklin: 15px,
-    Gill: 14.5px,
-    Tahoma: 14px,
-    Trebuchet: 15px
-  }
+  if kolommen
+    grootte = {
+      Arial-smal: 18.5px,
+      Cambria: 16px,
+      Franklin: 16px,
+      Gill: 16px,
+      Tahoma: 14.8px,
+      Trebuchet: 16.5px
+    }
+  else
+    grootte = {
+      Arial-smal: 18px,
+      Cambria: 14.8px,
+      Franklin: 15px,
+      Gill: 14.5px,
+      Tahoma: 14px,
+      Trebuchet: 15px
+    }
 
   html
     font-size: grootte[keuze]
 
   body, :root h3
     font-family: familie[keuze]
+
+  if kolommen
+    app-select-view .table
+      th, td
+        padding-left: 4px
+        padding-right: 4px
+      tr
+        *:nth-child(5), *:nth-child(6), *:nth-child(7)
+          padding-left: 3px
+          padding-right: 3px      
+      .fa-lg
+        font-size: 1.1em
+      .svg-inline--fa
+        .fa-w-16, .fa-w-18
+          width: 0.9em
