@@ -1,9 +1,9 @@
 /* ==UserStyle==
 @name           NHIS containers onderaan
 @namespace      github.com/zeehoavens
-@version        0.1.0
+@version        0.1.1
 @description    container aantallen onder ladingdetails per scheepspositie
-@author         Me
+@author         zeehoavens
 @preprocessor   stylus
 ==/UserStyle== */
 
@@ -14,4 +14,3 @@
   app-container-details
     order: 3
     margin-top: 0.5rem
-    
